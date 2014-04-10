@@ -59,7 +59,7 @@ exports.plugin = function (schema, options) {
     // Add properties for field in schema.
     fields[settings.field] = {
         type: Number,
-        unique: true,
+        unique: options.unique || true,
         require: true
     };
     schema.add(fields);
